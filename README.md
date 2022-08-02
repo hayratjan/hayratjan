@@ -16,6 +16,7 @@ Here are some ideas to get you started:
 -->
 ![嘻嘻嘻](https://github-readme-stats.vercel.app/api?username=stacklens&show_icons=true&theme=radical)
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hayratjan&show_icons=true&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hayratjan&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 ![](https://img.shields.io/badge/python-3.10-orange?style=for-the-badge&logo=python&logoColor=orange)
 
 开心的每一天！
