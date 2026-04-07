@@ -79,6 +79,17 @@
 
 </div>
 
+### 贪吃蛇吃贡献图
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hayratjan/hayratjan/output/github-snake-dark.svg" />
+  <img alt="snake contribution graph" src="https://raw.githubusercontent.com/hayratjan/hayratjan/output/github-snake.svg" width="880" />
+</picture>
+
+</div>
+
 ---
 
 更多维护说明见 `docs/README.md`。

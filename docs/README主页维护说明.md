@@ -21,6 +21,7 @@
 - **访问量徽章**：依赖第三方服务，偶尔不可用属于正常现象
 - **统计卡片**：来自 `github-readme-stats`、`github-readme-streak-stats` 等服务，偶尔会因限流/缓存导致加载慢
 - **用户名统一**：所有统计/徽章链接里的 `username=` 建议统一为你的 GitHub 用户名
+- **贪吃蛇贡献图**：依赖 GitHub Actions 定时生成并推送到 `output` 分支；首次启用后需要等待工作流跑完才会显示
 
 ### 结构建议（可对照 `README.md`）
 
@@ -31,4 +32,23 @@
 - 精选项目（建议固定 2-4 个）
 - 联系方式
 - 统计（可选，别太多）
+
+### 贪吃蛇贡献图（Snake）维护
+
+本仓库通过工作流 `snake.yml` 自动生成“贪吃蛇吃贡献图”的 SVG，并发布到 `output` 分支，主页 `README.md` 直接引用该文件。
+
+- **工作流位置**：`.github/workflows/snake.yml`
+- **产物分支**：`output`
+- **产物路径**：`github-snake.svg`、`github-snake-dark.svg`（发布在 `output` 分支根目录）
+- **手动触发**：进入 GitHub Actions，找到 `生成贪吃蛇贡献图`，点击 `Run workflow`
+
+#### 常见问题排查
+
+- **README 看不到图片**
+  - 确认工作流至少成功跑过一次（Actions 里状态为成功）
+  - 确认仓库里存在 `output` 分支且有 `dist/` 目录
+  - 确认图片引用路径没有改错（用户名/仓库名要匹配）
+- **工作流权限不足**
+  - 仓库设置里 Actions 需要允许 `GITHUB_TOKEN` 写入内容（默认通常可用）
+  - 如提示无法推送分支，检查 `snake.yml` 是否包含 `permissions: contents: write`
 
